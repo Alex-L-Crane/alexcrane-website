@@ -13,7 +13,6 @@ jobs:
           host: ${{secrets.SSH_HOST}}
           key: ${{SECRETS.SSH_KEY}}
           username: ${{SECRETS.SSH_USERNAME}}
-
         script: |
           mkdir test 
           cd test
