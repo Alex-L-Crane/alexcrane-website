@@ -5,7 +5,7 @@ on:
 
 jobs:
   deploy:
-    [self-hosted, linux]
+    runs-on: [self-hosted, linux]
     steps: 
       - name: Deploy Gridsome app
         uses: actions/checkout@v4
