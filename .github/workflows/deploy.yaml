@@ -4,7 +4,8 @@ on:
     branches: [production]
 
 jobs:
-  deploy
+  deploy:
+    [self-hosted, linux]
     steps: 
       - name: Deploy Gridsome app
         uses: actions/checkout@v4
