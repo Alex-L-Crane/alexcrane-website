@@ -5,10 +5,10 @@ on:
 
 jobs:
   deploy
-    runs-on: rockylinux-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Deploy Gridsome app
-        uses: appleboy/ssh-action@v0.1.2
+        uses: actions/checkout@v4
         with: 
           host: ${{secrets.SSH_HOST}}
           key: ${{SECRETS.SSH_KEY}}
