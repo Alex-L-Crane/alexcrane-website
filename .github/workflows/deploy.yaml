@@ -14,8 +14,8 @@ jobs:
           key: ${{SECRETS.SSH_KEY}}
           username: ${{SECRETS.SSH_USERNAME}}
 
-        script: |
-          mkdir test 
-          cd test
-          git clone git@github.com:Alex-L-Crane/alexcrane-website.git
-          echo "Successful deployment to Digital Ocean" 
+          script: |
+            mkdir test 
+            cd test
+            git clone git@github.com:Alex-L-Crane/alexcrane-website.git
+            echo "Successful deployment to Digital Ocean" 
