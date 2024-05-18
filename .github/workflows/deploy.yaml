@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Deploy Gridsome app
-        uses: actions/checkout@v4
+        uses: appleboyssh-action@v0.1.2
         with: 
           host: ${{secrets.SSH_HOST}}
           key: ${{SECRETS.SSH_KEY}}
