@@ -1,0 +1,21 @@
+name: Build & Deploy
+on:
+  push:
+    branches: [production]
+
+jobs:
+  deploy
+    runs-on: rocky-latest
+    steps: 
+      - name: Deploy Gridsome app
+        uses: appleboy/ssh-action@v0.1.2
+        with: 
+          host: ${{secrets.SSH_HOST}}
+          key: ${{SECRETS.SSH_KEY}}
+          username: ${{SECRETS.SSH_USERNAME}}
+
+        script:
+          mkdir test 
+          cd test
+          git clone git@github.com:Alex-L-Crane/alexcrane-website.git
+          echo "Successful deployment to Digital Ocean" 
